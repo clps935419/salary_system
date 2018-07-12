@@ -1,0 +1,61 @@
+h1 {
+  color: red; }
+
+.fontb {
+  color: red;
+  font-weight: bolder; }
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: red 1px solid;
+  -webkit-animation: 2s linear rot;
+  animation: 2s linear rot;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg); } }
+
+@keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg); } }
+
+.box.rotate {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; }
+
+#nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  #nav ul li {
+    list-style: none; }
+    #nav ul li a {
+      text-decoration: none;
+      display: block;
+      width: 100px;
+      margin-left: 10px;
+      border: black 2px solid;
+      text-align: center; }
+
+#nav .active {
+  background: yellow; }

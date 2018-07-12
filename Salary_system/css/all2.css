@@ -1,0 +1,96 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: #E8FFE8; }
+  .wrap .header {
+    padding: 20px 0; }
+    .wrap .header h1 {
+      font-size: 26px;
+      font-weight: bolder;
+      text-align: center; }
+
+#app {
+  width: 100%; }
+  #app .text {
+    width: 700px;
+    margin: 0 auto; }
+  #app h2 {
+    font-weight: bolder; }
+  #app .textbox {
+    padding-left: 20px;
+    padding-top: 10px; }
+  #app .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px; }
+    #app .content .box {
+      padding-left: 0;
+      width: 350px; }
+    #app .content table {
+      text-align: center; }
+      #app .content table input {
+        width: 50px; }
+      #app .content table th {
+        font-weight: bolder;
+        padding: 10px 0; }
+      #app .content table tr {
+        border-bottom: 1px solid black; }
+      #app .content table td {
+        padding: 10px 50px; }
+
+.butt {
+  width: 50px; }

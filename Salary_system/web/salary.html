@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script  src = "../js/vue.js" ></script>
+    <link rel="stylesheet" href="../css/all2.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>薪資系統實作</h1>
+        </div>
+        <div id="app">
+            <div class="text">
+                    <h2>新增資料:</h2>
+                    <div class="textbox">
+                        <label for="">name:</label><input type="text" v-model="newname" >
+                        <label for="">salary:</label><input type="text"v-model="newsalary">
+                        <label for="">month:</label>
+                        <select name="" id="" v-model="newmonth"><option  v-for="month in 12" :value="month">{{month}}</option></select>
+                        <input type="button" value="確定" @click="add" class="butt">
+                    </div>
+                    
+                    <br>
+                    <h2>查詢資料:</h2>
+                    <div class="textbox">
+                        <label for="">請輸入要查詢姓名:</label><input type="text" v-model="filterText">
+                    </div>
+            </div>
+               <div class="content">
+                    <table>
+                            <thead>
+                                <th>Name</th>
+                                <th>Salary</th>
+                                <th>Month</th>
+                                <th>Del</th>
+                                <th>Edit</th>
+                                <th>Edit place</th>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(item,key) in filterArray">
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.salary}}</td>
+                                    <td>{{item.month}}</td>
+                                    <td><input type="button" value="刪除" @click="remove(key)" class="butt"></td>
+                                    <td><input type="button" value="修改" @click="edit(item) " class="butt"></td>
+                                    <td class="box">
+                                        <div class="edit" v-if="item.isRotate==true">
+                                            <label for="">name:</label><input type="text" v-model="catchname">
+                                            <label for="">salary:</label><input type="text" v-model="catchsalary">
+                                            <label for="">month:</label>
+                                            <select name="" id="" v-model="catchmonth"><option  v-for="month in 12" :value="month">{{month}}</option></select>
+                                            <input type="button" @click="done(item)" value="確認" class="butt">
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+               </div>
+               
+                
+                
+            </div>
+    </div>
+    
+<script src="../js/all2.js"></script>
+</body>
+</html>
